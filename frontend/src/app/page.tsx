@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, ClipForm } from "@/components";
+import { BackendStatus, Card, ClipForm } from "@/components";
 import { useState } from "react";
 
 export default function Home() {
@@ -10,6 +10,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
       <Card className="w-full max-w-lg">
         <h2 className="text-center text-xl font-bold">YouTube Video Clipper</h2>
+        <BackendStatus />
         <ClipForm setMessage={setMessage} />
         {message && (
           <div>
